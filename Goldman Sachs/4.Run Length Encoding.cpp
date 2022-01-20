@@ -25,19 +25,16 @@ string encode(string src)
 {     
   string s="";
   int count=1;
-  for(int i=1;i<src.size();i++){
+  for(int i=1;i<=src.size();i++){
         if(src[i-1]==src[i]){
               count++;
-        }
-        else{
+      }
+      else{
             s+=src[i-1];
             s+=to_string(count);
             count=1;
-        }
-   }
-    s+=src[src.length()-1];
-    s+=to_string(count);
-    count=1;
+      }
+  }
     return s;
-}     
+}   
  
